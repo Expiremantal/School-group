@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header id="header">
+        <button class="toggle-btn" id="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <h2>ShortlistPRO</h2>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#" id="dashboard-btn" onclick="showSection('dashboard-section')"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="ats.html"><i class="fas fa-user"></i> Candidate Tracking System</a></li>
+                <li><a href="#" id="applicant-btn" onclick="showSection('Applicant-section')"><i class="fas fa-user-alt"></i> Applicants</a></li>
+                <li><a href="pipeline.html" id="candidate-pipeline-btn"><i class="fas fa-clipboard"></i> Candidate Pipeline</a></li>
+                <li><a href="#" id="resume-btn" onclick="showSection('resume-section')"><i class="fas fa-file"></i> Resumes</a></li>
+                <li><a href="#" id="talentPool-btn" onclick="showSection('talent-pool-section')"><i class="fas fa-briefcase"></i> Talent Pool</a></li>
+                <li><a href="#" id="job-posting-btn" onclick="showSection('job-posting-section')"><i class="fas fa-clipboard-list"></i> Job Posting</a></li>
+                <li><a href="#" id="settings-btn" onclick="showSection('settings-section')"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <ul class="sidebar-footer">
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content" id="content">
+            <!-- Dashboard Section -->
+            <div id="dashboard-section" class="section active">
+                <h3 class="welcome-message">Hey, welcome to your dashboard</h3>
+                <div class="stats">
+                    <div class="stat-box"><h4>Interviews</h4><p>0</p></div>
+                    <div class="stat-box"><h4>Shortlisted</h4><p>0</p></div>
+                    <div class="stat-box"><h4>Hired</h4><p>0</p></div>
+                </div>
+            </div>
+
+            <!-- Other Sections -->
+            <div id="talent-pool-section" class="section" style="display: none;">
+                <h2 class="section-heading">Talent Pool</h2>
+                <button class="talent-pool-btn" onclick="addToTalentPool()">Add to Talent Pool</button>
+            </div>
+
+            <div id="resume-section" class="section" style="display: none;">
+                <h2 class="section-heading">Resumes</h2>
+            </div>
+
+            <div id="job-posting-section" class="section" style="display: none;">
+                <h2 class="section-heading">Job Posting</h2>
+                <form>
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" id="jobTitle" placeholder="Enter job title">
+                    <label for="jobDescription">Job Description:</label>
+                    <textarea id="jobDescription" placeholder="Enter job description"></textarea>
+                    <label for="jobLocation">Job Location:</label>
+                    <input type="text" id="jobLocation" placeholder="Enter location">
+                    <button type="submit">Post Job</button>
+                </form>
+            </div>
+
+            <div id="settings-section" class="section" style="display: none;">
+                <h2 class="section-heading">Settings</h2>
+                <form>
+                    <label for="theme-toggle">Dark Mode</label>
+                    <input type="checkbox" id="theme-toggle">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

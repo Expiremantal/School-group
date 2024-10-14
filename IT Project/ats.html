@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Tracking System - Search and Ranking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Pipeline CSS Styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: white; /* Background color */
+            margin: 0; /* Reset margin */
+        }
+
+        header {
+            background-color: royalblue; /* Main header color */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center; /* Center align */
+        }
+
+        h2 {
+            font-size: 20px; /* Size for the overview header */
+            color: royalblue; /* Color for the overview header */
+            margin: 0; /* Remove margin */
+            text-align: left; /* Align left */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], .button {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+        }
+
+        .button {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: grey; /* Change hover color */
+        }
+
+        #results {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #results li {
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header id="header">
+        <button class="toggle-btn" id="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+        <h2><i class="fas fa-user-cog"></i> ShortlistPRO</h2>
+    </header>
+
+    <div class="container">
+        <div id="sidebar-container"></div> <!-- Placeholder for the sidebar -->
+
+        <div class="content" id="content">
+            <!-- Main content -->
+            <h1>Search for Candidates</h1>
+            <form id="searchForm">
+                <label for="skills">Required Skills (comma-separated):</label>
+                <input type="text" id="skills" placeholder="E.g., JavaScript, HTML, CSS">
+
+                <label for="experience">Required Experience (comma-separated):</label>
+                <input type="text" id="experience" placeholder="E.g., 2 years in frontend development">
+
+                <label for="education">Required Education (comma-separated):</label>
+                <input type="text" id="education" placeholder="E.g., Bachelor's degree in Computer Science">
+
+                <button type="submit" class="button">Search</button>
+            </form>
+
+            <h2>Ranking Results</h2>
+            <ul id="results"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to load sidebar
+        function loadSidebar() {
+            fetch('sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-container').innerHTML = data;
+                });
+        }
+
+        // Call loadSidebar on page load
+        document.addEventListener("DOMContentLoaded", loadSidebar);
+
+        // Simulate CVs for testing purposes
+        const cvs = [
+            {
+                name: "John Doe",
+                skills: "JavaScript, HTML, CSS, React",
+                experience: "2 years in frontend development",
+                education: "Bachelor's degree in Computer Science"
+            },
+            {
+                name: "Jane Smith",
+                skills: "Python, Django, HTML, CSS",
+                experience: "3 years in backend development",
+                education: "Bachelor's degree in Information Technology"
+            },
+            {
+                name: "Bob Johnson",
+                skills: "JavaScript, HTML, CSS, Angular",
+                experience: "4 years in frontend development",
+                education: "Master's degree in Computer Science"
+            }
+        ];
+
+        function rankCandidates(jobRequirements, cvs) {
+            return cvs.map(cv => {
+                let score = 0;
+
+                // Check skills
+                jobRequirements.skills.forEach(skill => {
+                    if (cv.skills.toLowerCase().includes(skill.toLowerCase())) {
+                        score += 3; // Higher weight for skills
+                    }
+                });
+
+                // Check experience
+                jobRequirements.experience.forEach(exp => {
+                    if (cv.experience.toLowerCase().includes(exp.toLowerCase())) {
+                        score += 2;
+                    }
+                });
+
+                // Check education
+                jobRequirements.education.forEach(edu => {
+                    if (cv.education.toLowerCase().includes(edu.toLowerCase())) {
+                        score += 1;
+                    }
+                });
+
+                return { ...cv, score };
+            }).sort((a, b) => b.score - a.score); // Sort by score (descending)
+        }
+
+        function updateCandidateStatus(candidateName, status) {
+            console.log(`${candidateName} status updated to ${status}`);
+            // Here you would send the updated status to the Candidate Pipeline
+            // For now, just log the status update
+        }
+
+        document.getElementById('searchForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Capture form inputs
+            const jobRequirements = {
+                skills: document.getElementById('skills').value.split(',').map(skill => skill.trim()),
+                experience: document.getElementById('experience').value.split(',').map(exp => exp.trim()),
+                education: document.getElementById('education').value.split(',').map(edu => edu.trim())
+            };
+
+            // Rank candidates based on inputs
+            const rankedCandidates = rankCandidates(jobRequirements, cvs);
+
+            // Clear previous results
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            // Display ranked candidates
+            rankedCandidates.forEach(candidate => {
+                const resultItem = document.createElement('li');
+                const statusDropdown = `
+                    <select class="status-dropdown">
+                        <option value="under consideration">Under Consideration</option>
+                        <option value="shortlisted">Shortlisted</option>
+                        <option value="approved">Approved</option>
+                        <option value="unsuccessful">Unsuccessful</option>
+                    </select>
+                `;
+
+                const updateButton = `<button class="update-button" onclick="updateCandidateStatus('${candidate.name}', this.previousElementSibling.value)">Update</button>`;
+
+                resultItem.innerHTML = `
+                    <div>
+                        <strong>${candidate.name}</strong><br>
+                        Skills: ${candidate.skills}<br>
+                        Experience: ${candidate.experience}<br>
+                        Education: ${candidate.education}<br>
+                        <strong>Score: ${candidate.score}</strong>
+                    </div>
+                    <div>
+                        ${statusDropdown}
+                        ${updateButton}
+                    </div>
+                `;
+
+                resultsContainer.appendChild(resultItem);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Details</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="candidate.css"> <!-- Link to new CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Candidate Details</h1>
+    </header>
+    <div class="container">
+        <h2 id="candidate-name">John Doe</h2>
+        <p><strong>Skills:</strong> JavaScript, HTML, CSS, React</p>
+        <p><strong>Experience:</strong> 2 years in frontend development</p>
+        <p><strong>Education:</strong> Bachelor's degree in Computer Science</p>
+
+        <h3>Application History</h3>
+        <ul id="application-history">
+            <li>Applied for Frontend Developer - Under Consideration</li>
+            <li>Applied for Backend Developer - Unsuccessful</li>
+            <!-- Additional application history items can be dynamically populated -->
+        </ul>
+
+        <h3>Change Status</h3>
+        <select id="status-dropdown">
+            <option value="Under Consideration">Under Consideration</option>
+            <option value="Shortlisted">Shortlisted</option>
+            <option value="Approved">Approved</option>
+            <option value="Unsuccessful">Unsuccessful</option>
+        </select>
+        <button onclick="changeCandidateStatus()">Change Status</button>
+
+        <button onclick="sendEmail()">Send Email</button>
+    </div>
+
+    <script src="candidate.js"></script> <!-- Link to JS file for candidate functionalities -->
+</body>
+</html>
