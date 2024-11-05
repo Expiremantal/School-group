@@ -1,0 +1,73 @@
+/* Login.css */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9fafb; /* Light background */
+}
+
+.login-form {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #d3d3d3; /* Moon gray */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.login-form h1 {
+    text-align: center;
+    color: #2e5984; /* Blueberry blue */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2e5984; /* Blueberry blue */
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2e5984; /* Blueberry blue */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #4c8cbf; /* Lighter blueberry blue on focus */
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e5984; /* Blueberry blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #4c8cbf; /* Lighter blueberry blue on hover */
+}
+
+.signup-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #2e5984; /* Blueberry blue */
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}

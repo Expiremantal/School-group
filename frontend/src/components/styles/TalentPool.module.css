@@ -1,0 +1,60 @@
+.talentPoolContainer {
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 290px; /* Space for the sidebar */
+    position: relative;
+    z-index: 1;
+}
+
+.departmentCard {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.departmentCard h3 {
+    padding: 20px;
+    color: #00254d; /* Blueberry blue */
+    margin-bottom: 10px;
+}
+
+.jobsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.jobCard {
+    background-color: white; /* White background */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.jobHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobTitle {
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor for clickable job titles */
+}
+
+.addBtn {
+    background-color: green; /* Green button for adding candidates */
+    color: white; /* White text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+.DeleteBtn{
+    padding: 0%;
+}
+.talentPoolParagraph {
+    margin-left: 290px; /* Your desired styles */
+}

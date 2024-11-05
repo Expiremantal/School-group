@@ -1,0 +1,20 @@
+/* styles/Calendar.css */
+
+.calendar {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .calendar h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .calendar p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
