@@ -1,0 +1,125 @@
+/* Sidebar Container */
+.sidebar {
+  width: 260px; /* Adjusted width to prevent content wrapping */
+  height: 100vh;
+  background-color: #003366; /* Blueberry blue */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px 10px; /* Added padding for better spacing */
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Logo and Profile Section */
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* User Profile */
+.user-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.user-profile img {
+  width: 60px; /* Slightly larger profile image */
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.user-info h4 {
+  margin: 5px 0;
+  font-size: 18px; /* Slightly larger text for better visibility */
+  color: #f0f0f0;
+}
+
+.user-info p {
+  font-size: 14px;
+  color: #b0c4de;
+}
+
+/* Navigation Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1; /* Allow ul to grow and take available space */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #c0c0c0;
+  text-decoration: none;
+  padding: 12px 15px; /* Increased padding for better click area */
+  margin: 5px 0; /* Added margin for spacing between links */
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-link i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+/* Hover and Active Effects */
+.nav-link:hover {
+  background-color: #004080; /* Slightly lighter blue */
+  color: #ffffff;
+}
+
+.nav-link.active {
+  background-color: #0059b3; /* Brighter active link color */
+  color: #ffffff;
+}
+
+/* Job Posting Link */
+.job-posting-link .nav-link {
+  background-color: #003366;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.job-posting-link .nav-link:hover {
+  background-color: #004080;
+  color: #ffffff;
+}
+
+/* Logout Button */
+.logout-container {
+  margin-top: auto; /* Push to the bottom */
+  padding: 10px 0; /* Adjusted padding for consistency */
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  color: #ff4d4d;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 5px; /* Rounded corners for logout button */
+  transition: background 0.3s, color 0.3s;
+}
+
+.logout:hover {
+  background-color: #800000;
+  color: #ffffff;
+}

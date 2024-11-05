@@ -1,0 +1,133 @@
+/* Layout styling */
+.job-posting {
+    display: flex;
+    margin-left: 260px;
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 260px;
+}
+
+/* Form styling */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Unified styles for inputs, dropdowns, and textareas */
+.form-input,
+.form-button,
+.dropdown,
+textarea {
+    width: 100%; /* Ensures all inputs are the same width */
+    padding: 10px; /* Consistent padding */
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Consistent border for all inputs */
+    border-radius: 4px; /* Rounded corners for all inputs */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+/* Button styling */
+.form-button {
+    background-color: #007bff; /* Button background */
+    color: white; /* Button text color */
+    border: none; /* No border for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+/* Success message styling */
+.success-message {
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Job List styling */
+.job-list {
+    margin-top: 20px;
+    margin-left: 290px; /* Added 'px' unit */
+    margin-right: 20px;
+    position: relative;
+}
+
+.job-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-table th {
+    background-color: #003366; /* Blueberry blue */
+    color: #ffffff;
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.job-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.job-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.job-table tbody tr:hover {
+    background-color: #eaf4ff; /* Light blue on hover */
+}
+
+/* Action button styling */
+.action-button {
+    width: 100%;
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease;
+    z-index: 3;
+}
+
+.notification.success {
+    background-color: #4a90e2; /* blueberry blue */
+}
+
+.notification.error {
+    background-color: #a9a9a9; /* moon gray */
+}
+
+/* Show notification */
+.notification.show {
+    opacity: 1;
+}

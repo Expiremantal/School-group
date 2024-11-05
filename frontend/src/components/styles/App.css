@@ -1,0 +1,10 @@
+.sidebar {
+    width: 260px; /* Keep sidebar width */
+}
+
+/* Talent Pool Container */
+.talentPoolContainer {
+    flex: 1; /* Allow the container to take the remaining space */
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+}

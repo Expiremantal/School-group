@@ -1,0 +1,104 @@
+/* Resume Page Styles */
+.resumePageContainer {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    margin-left: 250px; /* Adjust margin to make space for the sidebar */
+    min-height: 94.8vh; /* Ensure the content takes the full height of the viewport */
+    background-color: #d3d3d3; /* Light background for contrast */
+}
+
+.resumeFilterSection {
+    padding: 20px;
+    max-width: 80%;
+    margin: 40px auto; /* Center horizontally */
+    text-align: center;
+    background-color: #ffffff; /* White background for filter section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.resumeFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resumeFilterSection h2, 
+.resumePageContainer h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Darker color for headings */
+}
+
+.resumeFilterSection select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    width: 45%;
+    margin: 0 auto;
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+.resumeFilterSection select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.resumeButton {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* More padding for a button-like appearance */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 45%; /* Adjust width for better alignment */
+    margin: 10px auto; /* Add margin for spacing */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.resumeButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.resumeContactBox {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.resumeContactBox:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.resumePrimary {
+    display: inline-block;
+    margin: 10px;
+}
+
+.resumeFlex a {
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.resumeFlex a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker shade on hover */
+}
+
+.resumeFlex i {
+    margin-right: 5px; /* Space between icon and text */
+}
