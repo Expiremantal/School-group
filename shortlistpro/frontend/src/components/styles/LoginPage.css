@@ -1,0 +1,112 @@
+/* login.css */
+
+/* Ensure body and html take up full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #d0d0d0); /* blueberry blue to moon gray */
+  animation: backgroundSlide 10s infinite alternate;
+}
+
+@keyframes backgroundSlide {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+
+.login-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.website-name-animation {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #4a90e2; /* blueberry blue */
+  animation: textWave 2s infinite alternate;
+}
+
+@keyframes textWave {
+  0% { transform: scale(1); color: #4a90e2; }
+  100% { transform: scale(1.1); color: #b0c4de; }
+}
+
+.animated-login-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-login-form input,
+.animated-login-form select,
+.animated-login-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.animated-login-form button {
+  background-color: #4a90e2; /* blueberry blue */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.animated-login-form button:hover {
+  background-color: #357ab8; /* darker blueberry blue */
+}
+
+.extra-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.link {
+  color: #4a90e2; /* blueberry blue */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #357ab8;
+}
+
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.footer-link {
+  margin: 0 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: #d0d0d0; /* moon gray */
+}

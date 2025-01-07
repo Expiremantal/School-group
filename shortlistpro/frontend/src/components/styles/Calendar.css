@@ -1,0 +1,63 @@
+/* Container for the calendar */
+.calendar-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading style */
+.calendar-container h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2e3d49; /* Darker shade for the header */
+  margin-bottom: 20px;
+}
+
+/* Custom styles for the calendar */
+.react-calendar {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Highlighted dates for interviews */
+.react-calendar__tile--highlight {
+  background-color: #5c6bc0; /* Blue background for highlighted tiles */
+  color: white; /* Text color for highlighted dates */
+  font-weight: bold;
+}
+
+.react-calendar__tile--highlight:hover {
+  background-color: #3f51b5; /* Darker blue when hovering over highlighted dates */
+}
+
+/* Styles for the list of scheduled interviews */
+.calendar-container ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.calendar-container ul li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-container ul li:hover {
+  background-color: #e1e1e1; /* Slightly darker gray on hover */
+}
+
+/* Interview details styling */
+h4 {
+  font-size: 1.2rem;
+  color: #2e3d49;
+  margin-bottom: 10px;
+  text-align: center;
+}

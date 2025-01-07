@@ -1,0 +1,108 @@
+/* Container styling */
+.pipeline-container {
+  padding: 20px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 100px; /* Offset for sidebar if needed */
+  margin-right: 100px;
+}
+
+/* Header styling */
+.pipeline-container h1 {
+  font-size: 28px;
+  color: #00254d;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Status section layout */
+.status-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between status groups */
+}
+
+/* Status group cards */
+.status-group {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-group:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Status group headers */
+.status-group h2 {
+  font-size: 22px;
+  color: #00254d;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d3dae3;
+  padding-bottom: 8px;
+}
+
+/* List of candidates */
+.status-group ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.status-group li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eceff4;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.status-group li:last-child {
+  border-bottom: none;
+}
+
+.status-group li:hover {
+  color: #0056b3;
+}
+
+/* Button styling */
+button {
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 8px;
+}
+
+button:hover {
+  background-color: #003d82;
+}
+
+/* Remove button visibility for rejected candidates */
+.status-group.rejected-group li button {
+  display: none;
+}
+
+/* Styling for empty status group message */
+.no-candidates {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}

@@ -1,0 +1,78 @@
+.interviews {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .interviews ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .interview-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+  .interviews li {
+    margin: 10px 0;
+    
+  }
+  
+  .add-interview-btn {
+    background-color: #007bff;
+    margin-top: 20px;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .add-interview-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  .modal h3 {
+    margin-top: 0;
+}
+
+.modal select {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.modal button {
+    margin-right: 10px;
+}
+  
+  .search-results {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .search-results li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .search-results li:hover {
+    background-color: #f1f1f1;
+  }
+  

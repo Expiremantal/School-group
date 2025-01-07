@@ -1,0 +1,82 @@
+.section {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 2rem;
+    background-color: white; /* Background color for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    height: 100vh; /* Full viewport height */
+}
+
+.section-heading {
+    margin-bottom: 1.5rem; 
+    font-size: 1.5rem; 
+    color: #333;
+}
+
+.section label {
+    display: block;
+    margin-top: 1rem; 
+    font-weight: bold;
+}
+
+.section input,
+.section textarea,
+.section select {
+    width: 80vw; /* Width of input fields */
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease;
+}
+
+.section input:focus,
+.section textarea:focus,
+.section select:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+/* Additional styles for posted jobs can remain unchanged */
+
+#postedJobs {
+    padding: 2rem; 
+}
+
+#postedJobs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#postedJobs li {
+    border: 1px solid #ccc;
+    margin: 1rem 0; 
+    padding: 1rem; 
+    border-radius: 0.3125rem; 
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease; 
+}
+
+#postedJobs li:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design Example */
+@media (max-width: 768px) {
+    .section {
+        padding: 1rem; 
+        height: auto; /* Allow height to adjust on smaller screens */
+        max-width: 90%; /* Limit max width on smaller screens */
+        margin-left:auto; /* Center horizontally */
+        margin-right:auto; /* Center horizontally */
+        box-shadow:none; /* Optionally remove shadow on smaller screens */
+        border-radius:8px; 
+    }
+
+    .section-heading {
+        font-size: 1.25rem; 
+    }
+}

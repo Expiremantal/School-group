@@ -1,0 +1,127 @@
+.talentPoolContainer {
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 290px; /* Space for the sidebar */
+    position: relative;
+    z-index: 1;
+}
+
+.departmentCard {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.departmentCard h3 {
+    padding: 20px;
+    color: #00254d; /* Blueberry blue */
+    margin-bottom: 10px;
+}
+
+.jobsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.jobCard {
+    background-color: white; /* White background */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.jobHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobTitle {
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor for clickable job titles */
+}
+
+.addBtn {
+    background-color: green; /* Green button for adding candidates */
+    color: white; /* White text color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+.DeleteBtn{
+    padding: 0%;
+}
+.talentPoolParagraph {
+    margin-left: 290px; /* Your desired styles */
+}/* Style for the loading spinner */
+/* Bouncing Dots Loader */
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #00bcd4;
+    animation: pulse 2s infinite;
+  }
+  
+  .loader:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: bounce 1.2s infinite;
+  }
+  
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: bounce 1.2s infinite 0.4s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  /* Error Message Styling */
+  .talentPoolParagraph {
+    font-size: 16px;
+    color: #004080;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

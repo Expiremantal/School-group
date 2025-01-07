@@ -1,0 +1,195 @@
+/* Dashboard Container */
+.dashboard-container .dashboard {
+    display: flex;
+    /* Moon gray background */
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Main Content Area */
+.dashboard-container .main-content {
+    flex: 1;
+    padding: 22px;
+    margin-left: 100px; /* Aligns with the new sidebar width */
+}
+
+/* Dashboard Header */
+.dashboard-container .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.dashboard-container .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-container .search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+.btn-post-job {
+    text-decoration: none; /* Ensure no underline */
+}
+
+.dashboard-container .btn-post-job {
+    background-color: #007bff; /* Blue color for the button */
+    color: white;
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 15px;
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth background and transform */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Hover effect */
+.dashboard-container .btn-post-job:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Active effect */
+.dashboard-container .btn-post-job:active {
+    transform: translateY(0); /* Reset position when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when active */
+}
+
+/* Disabled state */
+.dashboard-container .btn-post-job:disabled {
+    background-color: #c0c0c0; /* Gray color for disabled state */
+    cursor: not-allowed; /* Not allowed cursor */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+
+.dashboard-container .notification-icon, .dashboard-container .user-image {
+    margin-right: 15px;
+}
+
+.dashboard-container .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Stats Container */
+.dashboard-container .stats-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dashboard-container .stats-container .stats-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Content Container */
+.dashboard-container .content-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Left Section */
+.dashboard-container .left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Section */
+.dashboard-container .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Applications and Interviews Containers */
+.dashboard-container .applications-container, .dashboard-container .interviews-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container .add-interview-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dashboard-container .add-interview-btn:hover {
+    background-color: #0056b3;
+}
+
+.dashboard-container .view-all-link {
+    color: #007bff;
+    text-align: right;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dashboard-container .view-all-link:hover {
+    text-decoration: underline;
+}
+
+/* Calendar */
+.dashboard-container .calendar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Elements for Styling Consistency */
+.dashboard-container .circular-bar-graph {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.pie-chart-container {
+    width: 100px; /* Set width as needed */
+    text-align: center;
+}
+
+.pie-chart-container h3 {
+    margin-bottom: 10px;
+}
+
+.dashboard-container .job-status {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

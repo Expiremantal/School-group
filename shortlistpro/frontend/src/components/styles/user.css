@@ -1,0 +1,65 @@
+.user-management {
+    width: 77%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-left: 200px;
+    margin-right: 50px;
+  }
+  
+  .user-management h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-management input,
+  .user-management select,
+  .user-management button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .user-management button {
+    background-color: #004080;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .user-management button:hover {
+    background-color: #004080;
+  }
+  
+  .users-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .users-table th {
+    background-color: #f1f1f1;
+  }
+  
+  .users-table button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .users-table button:hover {
+    background-color: #e53935;
+  }
+  

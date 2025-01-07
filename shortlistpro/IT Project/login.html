@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-register-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-register-container h2 {
+            color: royalblue;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-register-container form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-register-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-register-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+        }
+
+        .login-register-container button {
+            background-color: royalblue;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+        }
+
+        .login-register-container button:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .otp-section {
+            display: none;
+            width: 100%;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .otp-section input {
+            margin-bottom: 10px;
+        }
+
+        .send-again {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-register-container">
+        <h2>Login</h2>
+        <form id="loginForm" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            
+            <button type="submit" id="loginButton">Login</button>
+
+            <div class="forgot-password">
+                <a href="/forgot-password">Forgot Password?</a>
+            </div>
+        </form>
+
+        <div class="otp-section" id="otpSection">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" placeholder="One-Time Password" required>
+            <button id="verifyButton">Verify OTP</button>
+            <div id="timer" class="send-again">Resend OTP in <span id="countdown">60</span> seconds.</div>
+            <div class="send-again" id="sendAgain" onclick="sendOTP()">Send Again</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            // Simulate sending OTP
+            document.getElementById('otpSection').style.display = 'block';
+            startTimer();
+            alert('OTP has been sent to your email!');
+        });
+
+        let countdownTimer;
+        function startTimer() {
+            let countdown = 60;
+            const timerElement = document.getElementById('countdown');
+            const sendAgain = document.getElementById('sendAgain');
+            sendAgain.style.display = 'none';
+
+            countdownTimer = setInterval(function() {
+                countdown--;
+                timerElement.textContent = countdown;
+
+                if (countdown <= 0) {
+                    clearInterval(countdownTimer);
+                    sendAgain.style.display = 'block';
+                    timerElement.parentElement.style.display = 'none'; // Hide the timer when done
+                }
+            }, 1000);
+        }
+
+        function sendOTP() {
+            alert('OTP has been resent to your email!');
+            startTimer();
+            document.getElementById('sendAgain').style.display = 'none'; // Hide the send again link immediately
+            document.getElementById('timer').style.display = 'block'; // Show timer again
+        }
+
+        document.getElementById('verifyButton').addEventListener('click', function() {
+            const otp = document.getElementById('otp').value;
+            // Here you can implement the OTP verification logic
+
+            // Simulate successful OTP verification
+            alert('OTP verified! Redirecting to your dashboard...');
+            window.location.href = 'Dashboard.html'; // Change this to your actual dashboard URL
+        });
+    </script>
+</body>
+</html>

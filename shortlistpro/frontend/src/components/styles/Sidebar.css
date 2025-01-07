@@ -1,0 +1,140 @@
+/* Sidebar Container */
+.sidebar {
+  width: 240px; /* Adjusted for consistent layout */
+  min-height: 90cdvh; /* Full height for sidebar */
+  background: linear-gradient(135deg, #003366, #2C63DA); /* Smooth gradient */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px; /* Uniform spacing */
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease-in-out; /* Smooth hover/resize transitions */
+  position: fixed;
+  z-index: 1000;
+}
+
+/* Sidebar Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.logo-container img {
+  width: 100px; /* Responsive logo size */
+  height: auto;
+  border-radius: 8px; /* Rounded corners for logo */
+  margin-bottom: 10px;
+}
+
+.logo-text h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ffd700, #f09ae9); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Show gradient inside text */
+}
+
+.logo-text h1 span {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Navigation List */
+nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  flex-grow: 1;
+}
+
+nav ul li {
+  margin-bottom: 10px; /* Space between nav items */
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #e0e0e0; /* Neutral link color */
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, padding-left 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Hover and Active Link Styles */
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly brighter hover effect */
+  color: #fff;
+  padding-left: 20px;
+  transform: translateX(5px);
+}
+
+nav ul li a.active {
+  background: rgba(255, 255, 255, 0.3); /* Active link color */
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Logout Button */
+.logout-button {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #FF4C4C, #D12F2F); /* Gradient for logout button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.logout-button:hover {
+  background: linear-gradient(135deg, #D12F2F, #B72222); /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px; /* Adjusted for smaller screens */
+      padding: 10px;
+  }
+
+  .logo-container img {
+      width: 80px; /* Smaller logo size */
+  }
+
+  .logo-text h1 {
+      font-size: 1.5rem;
+  }
+
+  nav ul li a {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .logout-button {
+      font-size: 14px;
+      padding: 10px 15px;
+  }
+}
